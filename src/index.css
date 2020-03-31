@@ -1,0 +1,110 @@
+#banner {
+  position: relative;
+}
+
+#img-block {
+  display: block;
+  text-align: center;
+}
+
+#btn-block {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+}
+
+#btn-block .btn {
+  position: relative;
+  border: none;
+  background-color: #000;
+  font-size: 9px;
+  color: #fff;
+  padding-left: 6px;
+  padding-right: 9px;
+  box-shadow: none;
+}
+
+/* 下箭头 */
+#btn-block .closed:after {
+  display: block;
+  content: "";
+  border-width: 3px 3px 3px 3px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+
+  /* 定位 */
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+}
+
+/* 上箭头 */
+#btn-block .opened:before {
+  display: block;
+  content: "";
+  border-width: 3px 3px 3px 3px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+
+  position: absolute;
+  right: 5%;
+  bottom: 40%;
+}
+
+.opening {
+  -webkit-animation: scaleZoomIn 0.2s ease-in-out normal;
+}
+
+.closing {
+  /* -webkit-transition: 5s;
+  -moz-transition: 5s;
+  -ms-transition: 5s;
+  -o-transition: 5s;
+  transition: 5s;
+  margin-bottom: 50% !important; */
+  -webkit-animation: scaleZoomOut 0.2s ease-in-out normal;
+}
+
+/*放大*/
+@keyframes scaleZoomIn {
+  0% {
+    width: 1200px;
+    height: 80px;
+  }
+  25% {
+    width: 1200px;
+    height: 150px;
+  }
+  50% {
+    width: 1200px;
+    height: 200px;
+  }
+  75% {
+    width: 1200px;
+    height: 250px;
+  }
+  100% {
+    width: 1200px;
+    height: 300px;
+  }
+}
+
+/*縮小*/
+@keyframes scaleZoomOut {
+  0% {
+    width: 1200px;
+    height: 250px;
+  }
+  25% {
+    width: 1200px;
+    height: 200px;
+  }
+  50% {
+    width: 1200px;
+    height: 150px;
+  }
+  75% {
+    width: 1200px;
+    height: 80px;
+  }
+}
